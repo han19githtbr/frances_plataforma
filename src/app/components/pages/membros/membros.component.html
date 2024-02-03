@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <h2 class="page-header">Nossa equipe</h2>
+  <!-- Default box -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let membro of membros">
+      <app-membro [membro]="membro"></app-membro>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.tag {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.experiencia {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.interesses {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.profile-user-img {
+  width: 200px;
+  height: 200px;
+}
+
+.card-primary {
+
+}

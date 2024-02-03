@@ -1,0 +1,12 @@
+.nacionalidade {
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+
+.residencia {
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+
