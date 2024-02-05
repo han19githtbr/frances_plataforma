@@ -32,5 +32,4 @@ export class AuthService {
     this.clear();
     this.router.navigate(['/'])
   }
-
 }
