@@ -42,10 +42,10 @@
     + '<h6>Navbar Variants</h6>'
   )
 
-  var $navbar_variants        = $('<div />', {
+  var $navbar_variants = $('<div />', {
     'class': 'd-flex'
   })
-  var navbar_all_colors       = navbar_dark_skins.concat(navbar_light_skins)
+  var navbar_all_colors = navbar_dark_skins.concat(navbar_light_skins)
   var $navbar_variants_colors = createSkinBlock(navbar_all_colors, function (e) {
     var color = $(this).data('color')
     var $main_header = $('.main-header')
@@ -158,6 +158,7 @@
   var $sidebar_variants = $('<div />', {
     'class': 'd-flex'
   })
+
   $container.append($sidebar_variants)
   $container.append(createSkinBlock(sidebar_colors, function () {
     var color         = $(this).data('color')
@@ -171,10 +172,12 @@
   }))
 
   var logo_skins = navbar_all_colors
+
   $container.append('<h6>Brand Logo Variants</h6>')
   var $logo_variants = $('<div />', {
     'class': 'd-flex'
   })
+
   $container.append($logo_variants)
   var $clear_btn = $('<a />', {
     href: 'javascript:void(0)'
@@ -184,6 +187,7 @@
       $logo.removeClass(skin)
     })
   })
+
   $container.append(createSkinBlock(logo_skins, function () {
     var color = $(this).data('color')
     var $logo = $('.brand-link')

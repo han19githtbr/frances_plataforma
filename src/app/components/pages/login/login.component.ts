@@ -9,8 +9,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  //login:{ email:string, password:string } = { email: 'teste@gmail.com', password: '123456' }
-
   loginForm: FormGroup
 
   constructor(private fb: FormBuilder, private authService: AuthService) {
