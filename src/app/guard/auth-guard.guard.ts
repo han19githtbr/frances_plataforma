@@ -6,9 +6,10 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthGuardGuard implements CanActivate {
 
-  constructor(public authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   canActivate(
     next: ActivatedRouteSnapshot,
@@ -19,9 +20,14 @@ export class AuthGuardGuard implements CanActivate {
         this.router.navigate(['/login']);
       }
       return false;
-    }else{
+    } else {
       return true;
     }
-
   }
 }
+
+
+/*Este guarda de rota é responsável por verificar se o
+usuário está autenticado antes de permitir o acesso
+a determinadas rotas. Se o usuário não estiver
+autenticado, ele é redirecionado para a página de login.*/

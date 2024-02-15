@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder, private authService: AuthService) {
     this.loginForm = fb.group(
       {
-        email: ['membro@gmail.com', [Validators.email, Validators.required]],
+        email: ['exemplo@gmail.com', [Validators.email, Validators.required]],
         password: ['', [Validators.required, Validators.minLength(6)]]
       }
     )
@@ -24,7 +24,34 @@ export class LoginComponent implements OnInit {
     console.log(localStorage.getItem('user'));
   }
 
+
   submit() {
+
+    let dataLogin = this.loginForm.getRawValue();
+
+    if(this.loginForm.valid){
+      this.authService.login(dataLogin).subscribe(
+        dataServer => {
+          if(dataServer){
+            if(dataLogin.password == dataServer.password) {
+
+                delete dataServer.password;
+                localStorage.setItem('user', JSON.stringify(dataServer) );
+                alert('Usuário logado com sucesso!')
+            } else {
+                alert('Usuário ou senha Inválido!')
+            }
+          }else{
+            alert('Usuário não cadastrado!')
+          }
+          // console.log(dataServer);
+        }
+      )
+    }
+  }
+
+
+  /*submit() {
 
     let dataLogin = this.loginForm.getRawValue();
 
@@ -47,5 +74,5 @@ export class LoginComponent implements OnInit {
         }
       )
     }
-  }
+  }*/
 }

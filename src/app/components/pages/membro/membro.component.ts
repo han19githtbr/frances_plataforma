@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Membro } from '../../../model/membro.model';
+import { Member } from '../../../../../backend/models/member.model.js'
 
 @Component({
   selector: 'app-membro',
@@ -8,7 +8,7 @@ import { Membro } from '../../../model/membro.model';
 })
 export class MembroComponent implements OnInit {
 
-  @Input() membro: Membro
+  //@Input() membro: Member
 
   constructor() { }
 

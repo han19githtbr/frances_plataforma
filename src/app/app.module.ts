@@ -1,8 +1,8 @@
+import { ConnectionService } from './services/connection.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
@@ -15,6 +15,8 @@ import { MembrosService } from './services/membros.service';
 import { LoginComponent } from './components/pages/login/login.component';
 import { AuthService } from './services/auth.service';
 import { RegisterComponent } from './components/pages/register/register.component';
+//import { MembrosDetailComponent } from './components/pages/membros-detail/membros-detail.component';
+//import { TeamComponent } from './components/pages/team/team.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +25,11 @@ import { RegisterComponent } from './components/pages/register/register.componen
     HomeComponent,
     HeaderComponent,
     AboutComponent,
+    LoginComponent,
+    RegisterComponent,
     MembroComponent,
     MembrosComponent,
-    LoginComponent,
-    RegisterComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { RegisterComponent } from './components/pages/register/register.componen
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [MembrosService, AuthService],
+  providers: [AuthService, ConnectionService, MembrosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

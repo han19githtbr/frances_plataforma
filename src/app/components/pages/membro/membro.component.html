@@ -1,35 +1,36 @@
-<a [routerLink]="['/membro-detail', membro.id]">
-  <div class="card card-widget widget-user">
-    <div class="widget-user-header bg-info">
-      <h3 class="widget-user-username">{{membro.name}}</h3>
-      <h5 class="widget-user-desc">{{membro.job}}</h5>
-    </div>
-    <div class="widget-user-image">
-      <img class="img-circle " [src]="membro.profilePath" alt="User Avatar">
-    </div>
-    <div class="card-footer">
-      <div class="row">
-        <div class="col-sm-4 border-right">
-          <div class="description-block nacionalidade">
-            <h5 class="description-header">{{membro.nationality}}</h5>
-            <span class="description-text">Nacionalidade</span>
-          </div>
-        </div>
+<section class="bg-team">
+  <section class="container">
+      <h2 class="title">
+          <span class="text-center">Conheça a nossa equipe</span>
+          <!-- <span class="secontary">...</span> -->
+      </h2>
+      <div class="gallery-wrapper">
+          <figure class="gallery-item">
+              <img src="../../../../assets//img/Handy.jpeg" alt="" class="item-image">
+              <figcaption class="item-description">
+                  <h4 class="name">Handy Milliance</h4>
+                  <span class="role">Falante nativo de Francês</span>
+                  <button class="saibamais">Saiba mais</button>
+              </figcaption>
+          </figure>
 
-        <div class="col-sm-4 border-right">
-          <div class="description-block residencia">
-            <h5 class="description-header">{{membro.paisderesidencia}}</h5>
-            <span class="description-text">País de Residência</span>
-          </div>
-        </div>
+          <figure class="gallery-item">
+              <img src="../../../../assets/img/Jack.jpg" alt="" class="item-image">
+              <figcaption class="item-description">
+                  <h4 class="name">Jackenson Mathieu</h4>
+                  <span class="role">Falante nativo de Francês</span>
+                  <button class="saibamais">Saiba mais</button>
+              </figcaption>
+          </figure>
 
-        <div class="col-sm-4">
-          <div class="description-block">
-            <h5 class="description-header">Disponível</h5>
-            <span class="description-text">{{membro.disponibilidade}}</span>
-          </div>
-        </div>
+          <figure class="gallery-item">
+              <img src="../../../../assets/img/Faubert.jpg" alt="" class="item-image">
+              <figcaption class="item-description">
+                  <h4 class="name">Faubert Alcindor</h4>
+                  <span class="role">Falante nativo de Francês</span>
+                  <button class="saibamais">Saiba mais</button>
+              </figcaption>
+          </figure>
       </div>
-    </div>
-  </div>
-</a>
+  </section>
+</section>

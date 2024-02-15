@@ -8,29 +8,17 @@
     <li class="nav-item d-none d-sm-inline-block" *ngIf="authService.isAuthenticated()">
       <a [routerLink]="['/membros']" routerLinkActive="active" class="nav-link"><b class="text-light">Nossa Equipe</b></a>
     </li>
+
     <li class="nav-item d-none d-sm-inline-block">
       <a [routerLink]="['/about']" routerLinkActive="active" class="nav-link"><b class="text-light">Sobre o projeto</b></a>
     </li>
-    <li class="nav-item d-none d-sm-inline-block">
+    <li class="nav-item d-none d-sm-inline-block" *ngIf="authService.isAuthenticated()">
       <a [routerLink]="['/conteudo']" routerLinkActive="active" class="nav-link"><b class="text-light">Conteúdo</b></a>
     </li>
   </ul>
 
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
-
-    <!-- SEARCH FORM -->
-    <!--<form class="form-inline ml-2">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Pesquisar aluno..."
-          aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>-->
 
     <!-- Notifications Dropdown Menu -->
     <li class="nav-item dropdown">
@@ -45,10 +33,10 @@
           <i class="fas fa-user-circle"></i> Meu Perfil
         </a>
         <div class="dropdown-divider" *ngIf="authService.isAuthenticated()"></div>
-        <a class="dropdown-item dropdown-footer" *ngIf="authService.isAuthenticated()" (click)="this.authService.logout()"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        <a class="dropdown-item dropdown-footer" *ngIf="authService.isAuthenticated()" (click)="this.authService.logout()">
+          <i class="fas fa-sign-out-alt"></i> Sair
+        </a>
       </div>
     </li>
   </ul>
 </nav>
-<!-- /.navbar -->
-
